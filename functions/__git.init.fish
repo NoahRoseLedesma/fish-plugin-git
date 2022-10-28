@@ -202,6 +202,14 @@ function __git.init
   __git.create_abbr gmr        git push origin \(__git.current_branch\) --set-upstream -o merge_request.create
   __git.create_abbr gmwps      git push origin \(__git.current_branch\) --set-upstream -o merge_request.create -o merge_request.merge_when_pipeline_succeeds
 
+  # git cl abbreviations (chromium)
+  __git.create_abbr gnb        git new-branch
+  __git.create_abbr gcl        git cl
+  __git.create_abbr gclco      git cl checkout
+  __git.create_abbr gclu       git cl upload
+  __git.create_abbr gclus      git cl upstream
+  __git.create_abbr gclps      git cl presubmit
+
   # Cleanup declared functions
   functions -e __git.create_abbr
 end
