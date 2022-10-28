@@ -28,21 +28,20 @@ function __git.init
   __git.create_abbr gbsg       git bisect good
   __git.create_abbr gbsr       git bisect reset
   __git.create_abbr gbss       git bisect start
-  __git.create_abbr gc         git commit -v
-  __git.create_abbr gc!        git commit -v --amend
-  __git.create_abbr gcn!       git commit -v --no-edit --amend
-  __git.create_abbr gca        git commit -v -a
-  __git.create_abbr gca!       git commit -v -a --amend
-  __git.create_abbr gcan!      git commit -v -a --no-edit --amend
-  __git.create_abbr gcv        git commit -v --no-verify
-  __git.create_abbr gcav       git commit -a -v --no-verify
-  __git.create_abbr gcav!      git commit -a -v --no-verify --amend
+  __git.create_abbr gc         git commit 
+  __git.create_abbr gc!        git commit --amend
+  __git.create_abbr gcn!       git commit --no-edit --amend
+  __git.create_abbr gca        git commit -a
+  __git.create_abbr gca!       git commit -a --amend
+  __git.create_abbr gcan!      git commit -a --no-edit --amend
+  __git.create_abbr gcv        git commit --no-verify
+  __git.create_abbr gcav       git commit -a --no-verify
+  __git.create_abbr gcav!      git commit -a --no-verify --amend
   __git.create_abbr gcm        git commit -m
   __git.create_abbr gcam       git commit -a -m
   __git.create_abbr gscam      git commit -S -a -m
   __git.create_abbr gcfx       git commit --fixup
   __git.create_abbr gcf        git config --list
-  __git.create_abbr gcl        git clone
   __git.create_abbr gclean     git clean -di
   __git.create_abbr gclean!    git clean -dfx
   __git.create_abbr gclean!!   "git reset --hard; and git clean -dfx"
@@ -173,6 +172,14 @@ function __git.init
   __git.create_abbr gwtpr      git worktree prune
   __git.create_abbr gwtrm      git worktree remove
   __git.create_abbr gwtulo     git worktree unlock
+
+  # git cl abbreviations (chromium)
+  __git.create_abbr gnb        git new-branch
+  __git.create_abbr gcl        git cl
+  __git.create_abbr gclco      git cl checkout
+  __git.create_abbr gclu       git cl upload
+  __git.create_abbr gclus      git cl upstream
+  __git.create_abbr gclps      git cl presubmit
 
   # Cleanup declared functions
   functions -e __git.create_abbr
