@@ -189,6 +189,10 @@ function __git.init
   __git.create_abbr gclus      git cl upstream
   __git.create_abbr gclps      git cl presubmit
 
+  # GitLab push options
+  __git.create_abbr gmr        ggp --set-upstream -o merge_request.create
+  __git.create_abbr gmwps      ggp --set-upstream -o merge_request.create -o merge_request.merge_when_pipeline_succeeds
+
   # Cleanup declared functions
   functions -e __git.create_abbr
 end
